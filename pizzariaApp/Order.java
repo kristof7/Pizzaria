@@ -1,30 +1,19 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Order {
 
-    private String client;
-    private String address;
-    private int phoneNumber;
+    private Client client;
+    private List<Object> meal;
 
-    public String getClient() {
-        return client;
-    }
-
-    public void setClient(String client) {
+    public Order(Client client, List<Object> meal) {
         this.client = client;
+        this.meal = meal;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public String toOrder(int orderNumber) {
+        return orderNumber + " order: " + client + ".";
     }
 }
